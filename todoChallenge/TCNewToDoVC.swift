@@ -41,7 +41,7 @@ class TCNewToDoVC: UIViewController {
             newToDo.dateAdded = Date()
             newToDo.done = false
             
-            RealmWrite.add(newToDo)
+            TCToDo.realmAdd(newToDo)
         }
         let getNew = NSNotification.Name(rawValue: "GetNewData")
         NotificationCenter.default.post(name: getNew, object: nil)

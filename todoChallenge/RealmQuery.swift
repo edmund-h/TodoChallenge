@@ -29,12 +29,20 @@ class RealmQuery {
         //build predicate out of dictionary
         var predicateString = ""
         var predicateValues: [Any] = []
+        let last = true
         for key in filter.keys{
             if let value = filter [key]{
                 predicateValues.append(value)
-                predicateString.append(key.rawValue  + "== %@ AND ")
+                //compare dates and titles/content differently
+                var comparison = "CONTAINS"
+                if key == .dateDue || key == .dateAdded {
+                    comparison = "=="
+                }
+                predicateString.append(key.rawValue  + " \(comparison) %@ AND ")
             }
         }
+        // drop the last AND!
+        predicateString = predicateString.components(separatedBy: "@ ").dropLast().joined(separator: "@ ").appending("@")
         let predicate = NSPredicate(
             format: predicateString,
             argumentArray: predicateValues

@@ -21,6 +21,10 @@ class TCFilterVC: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var pickerContainerHeight: NSLayoutConstraint!
     
+    var dueDateValue: Date?
+    var dateAddedValue: Date?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerContainerHeight.constant = 0
@@ -38,8 +42,10 @@ class TCFilterVC: UIViewController {
         // I built this weird system to determine which date we are editing
         if !dateCreatedFilterField.isUserInteractionEnabled {
             dateCreatedFilterField.text = TCCalendarDay.dateFormatter.string(from: datePicker.date)
+            dateAddedValue = datePicker.date
         } else if !dateDueFilterField.isUserInteractionEnabled {
             dateDueFilterField.text = TCCalendarDay.dateFormatter.string(from: datePicker.date)
+            dueDateValue = datePicker.date
         }
         
         //put away date picker area
@@ -72,19 +78,19 @@ class TCFilterVC: UIViewController {
             filter[.title] = text
         }
         
-        if let text = dateCreatedFilterField.text, text != "" {
-            filter[.dateAdded] = text
+        if let date = dateAddedValue {
+            filter[.dateAdded] = TCCalendarDay.make(from: date).full
         }
         
-        if let text = dateDueFilterField.text, text != "" {
-            filter[.dateDue] = text
+        if let date = dueDateValue {
+            filter[.dateDue] = TCCalendarDay.make(from: date).full
         }
         
         if let text = descriptionFilterField.text, text != "" {
             filter[.content] = text
         }
         
-        filter[.done] = doneSwitch.isOn
+        //filter[.done] = doneSwitch.isOn
         
         let getNew = NSNotification.Name(rawValue: "GetNewData")
         NotificationCenter.default.post(name: getNew, object: nil, userInfo: ["filter": filter])

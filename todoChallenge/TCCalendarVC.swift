@@ -41,8 +41,8 @@ class TCCalendarVC: UICollectionViewController {
     
     
 
-    @IBAction func showPopOver(_ sender: UITapGestureRecognizer) {
-        //create popever at location where touch occurred (this is a bit inaccurate)
+    func showPopOver(_ sender: UITapGestureRecognizer) {
+        //create popover at location where touch occurred (this is a bit inaccurate)
         let point = sender.location(in: sender.view)
         let frame = CGRect(origin: point, size: CGSize(width: 10, height: 10))
         //use choice to segue into create or filter todo view
@@ -58,9 +58,15 @@ class TCCalendarVC: UICollectionViewController {
         }, cancel: {})
     }
     
-    
-    func reloadWithNewData() {
-        calendar = RealmQuery.toDosByDate(filter: nil, forCalendar: .due)
+    //this gets data from the filter and new todo VCs
+    func reloadWithNewData(notification: Notification) {
+        var filter: ToDoFilter? = nil
+        if let userInfo = notification.userInfo{
+            filter = userInfo["filter"] as? ToDoFilter
+        }
+        
+        calendar = RealmQuery.toDosByDate(filter: filter, forCalendar: .due)
+        
         collectionView?.reloadData()
     }
     

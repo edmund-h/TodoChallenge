@@ -223,7 +223,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkt-eQ-mHB">
                                         <rect key="frame" x="3" y="244" width="139.5" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="CancelPressed:" destination="Xcc-lp-fj8" eventType="touchUpInside" id="zCT-eG-glJ"/>
                                         </connections>
@@ -231,7 +231,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bau-Ye-IDA" userLabel="Filter Button">
                                         <rect key="frame" x="145.5" y="244" width="139.5" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Filter"/>
                                         <connections>
                                             <action selector="FilterPressed:" destination="Xcc-lp-fj8" eventType="touchUpInside" id="eJK-G4-TtQ"/>
                                         </connections>

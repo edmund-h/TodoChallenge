@@ -1,0 +1,20 @@
+PODS:
+  - FTPopOverMenu_Swift (0.0.8)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
+
+DEPENDENCIES:
+  - FTPopOverMenu_Swift
+  - RealmSwift
+
+SPEC CHECKSUMS:
+  FTPopOverMenu_Swift: '08f9a712c63811f675fe0b604c792e46246e00d9'
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
+
+PODFILE CHECKSUM: b9538cca6778a15a8eb74d8ef4a35c3dc3770587
+
+COCOAPODS: 1.2.1

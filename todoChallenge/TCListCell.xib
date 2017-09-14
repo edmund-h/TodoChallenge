@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TCListCell" customModule="todoChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="cellImage" destination="xCX-ph-Kkx" id="SpK-Kg-dC5"/>
+                <outlet property="container" destination="iN0-l3-epB" id="IZg-oY-dvr"/>
+                <outlet property="contentLabel" destination="yFc-yi-X5s" id="XLO-PB-K5y"/>
+                <outlet property="timeLabel" destination="32J-T0-Xfr" id="jQF-FG-4xB"/>
+                <outlet property="titleLabel" destination="4Kv-k1-739" id="Tmf-cW-DQC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error-triangle (1)" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-ph-Kkx">
+                    <rect key="frame" x="15" y="4" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xCX-ph-Kkx" secondAttribute="height" multiplier="1:1" id="TvV-0f-JGI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-k1-739">
+                    <rect key="frame" x="66.5" y="4" width="33.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32J-T0-Xfr">
+                    <rect key="frame" x="307" y="4" width="38" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFc-yi-X5s">
+                    <rect key="frame" x="65.5" y="25.5" width="300" height="14.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="oXw-yC-rGS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yFc-yi-X5s" firstAttribute="bottom" secondItem="xCX-ph-Kkx" secondAttribute="bottom" id="0MG-KO-YLh"/>
+                <constraint firstItem="xCX-ph-Kkx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="QRm-Bj-Dd2"/>
+                <constraint firstItem="4Kv-k1-739" firstAttribute="leading" secondItem="xCX-ph-Kkx" secondAttribute="trailing" constant="15" id="Vqh-wJ-6yH"/>
+                <constraint firstItem="xCX-ph-Kkx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="X9b-xZ-Ulb"/>
+                <constraint firstAttribute="trailing" secondItem="32J-T0-Xfr" secondAttribute="trailing" constant="30" id="Ywh-7n-uE1"/>
+                <constraint firstItem="xCX-ph-Kkx" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" constant="-8" id="Zae-aE-mwi"/>
+                <constraint firstItem="xCX-ph-Kkx" firstAttribute="width" secondItem="xCX-ph-Kkx" secondAttribute="height" multiplier="1:1" id="ccx-wR-OIG"/>
+                <constraint firstItem="4Kv-k1-739" firstAttribute="top" secondItem="xCX-ph-Kkx" secondAttribute="top" id="cwX-OZ-sm1"/>
+                <constraint firstItem="yFc-yi-X5s" firstAttribute="leading" secondItem="xCX-ph-Kkx" secondAttribute="trailing" constant="15" id="ia7-En-1Tn"/>
+                <constraint firstItem="32J-T0-Xfr" firstAttribute="top" secondItem="4Kv-k1-739" secondAttribute="top" id="mgH-nV-TAz"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="4.5" y="-60"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="error-triangle (1)" width="16" height="16"/>
+    </resources>
+</document>

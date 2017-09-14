@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TCCalendarCell" customModule="todoChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="iN0-l3-epB" id="Viy-Tc-Fs0"/>
+                <outlet property="dayLabel" destination="MM0-hT-2dR" id="7tQ-dA-73B"/>
+                <outlet property="monthLabel" destination="PDQ-O0-HJi" id="hV5-vE-Viu"/>
+                <outlet property="notesLabel" destination="hyq-bl-p0f" id="Lg7-hG-fzC"/>
+                <outlet property="weekdayLabel" destination="YAS-P5-CfT" id="hN9-Vc-kAa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDQ-O0-HJi">
+                    <rect key="frame" x="5.5" y="4" width="79.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MM0-hT-2dR">
+                    <rect key="frame" x="29" y="29" width="32" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAS-P5-CfT">
+                    <rect key="frame" x="5" y="63" width="80" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 📌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyq-bl-p0f">
+                    <rect key="frame" x="18" y="96" width="55" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MM0-hT-2dR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0KK-li-55b"/>
+                <constraint firstItem="hyq-bl-p0f" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="52z-hn-yFT"/>
+                <constraint firstItem="YAS-P5-CfT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="B2y-fJ-Ih8"/>
+                <constraint firstItem="PDQ-O0-HJi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="EaY-Ac-ja4"/>
+                <constraint firstAttribute="bottom" secondItem="hyq-bl-p0f" secondAttribute="bottom" constant="10" id="Mob-vp-2st"/>
+                <constraint firstItem="YAS-P5-CfT" firstAttribute="top" secondItem="MM0-hT-2dR" secondAttribute="bottom" constant="4" id="OcE-G4-ID4"/>
+                <constraint firstItem="MM0-hT-2dR" firstAttribute="top" secondItem="PDQ-O0-HJi" secondAttribute="bottom" constant="4" id="fki-Rs-MdY"/>
+                <constraint firstItem="PDQ-O0-HJi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qJH-Uc-ut1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

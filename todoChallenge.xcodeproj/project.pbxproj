@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39F0A8CD7455D2B35C9C9884 /* Pods_todoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 297BBA1196D3C0DAAB10FDAD /* Pods_todoChallenge.framework */; };
+		8841E9231F69208C00D40333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8841E9221F69208C00D40333 /* AppDelegate.swift */; };
+		8841E9281F69208C00D40333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8841E9261F69208C00D40333 /* Main.storyboard */; };
+		8841E92A1F69208C00D40333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8841E9291F69208C00D40333 /* Assets.xcassets */; };
+		8841E92D1F69208C00D40333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8841E92B1F69208C00D40333 /* LaunchScreen.storyboard */; };
+		88C277E51F6924E600C7C9C3 /* TCTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277E41F6924E600C7C9C3 /* TCTodo.swift */; };
+		88C277E91F69308400C7C9C3 /* TCCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277E81F69308400C7C9C3 /* TCCalendarCell.swift */; };
+		88C277EB1F6933B700C7C9C3 /* TCCalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C277EA1F6933B700C7C9C3 /* TCCalendarCell.xib */; };
+		88C277ED1F693A8100C7C9C3 /* TCCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277EC1F693A8100C7C9C3 /* TCCalendarVC.swift */; };
+		88C277F21F69A64800C7C9C3 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277F11F69A64800C7C9C3 /* RealmQuery.swift */; };
+		88C277F41F69B85200C7C9C3 /* TCFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277F31F69B85200C7C9C3 /* TCFilterVC.swift */; };
+		88C277F61F69C59B00C7C9C3 /* TCNewToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277F51F69C59B00C7C9C3 /* TCNewToDoVC.swift */; };
+		88C277F81F69D64700C7C9C3 /* TCCalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277F71F69D64700C7C9C3 /* TCCalendarDay.swift */; };
+		88C277FC1F69E44400C7C9C3 /* RealmWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277FB1F69E44400C7C9C3 /* RealmWrite.swift */; };
+		88C277FE1F6A103C00C7C9C3 /* TCToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C277FD1F6A103C00C7C9C3 /* TCToDoListVC.swift */; };
+		88C278041F6A2F3100C7C9C3 /* TCListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88C278031F6A2F3100C7C9C3 /* TCListCell.xib */; };
+		88C278061F6A300D00C7C9C3 /* TCListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C278051F6A300D00C7C9C3 /* TCListCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		297BBA1196D3C0DAAB10FDAD /* Pods_todoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ACF015C56917F89CF12CAFF /* Pods-todoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todoChallenge/Pods-todoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		8841E91F1F69208C00D40333 /* todoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8841E9221F69208C00D40333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8841E9271F69208C00D40333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8841E9291F69208C00D40333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8841E92C1F69208C00D40333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8841E92E1F69208C00D40333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88C277E41F6924E600C7C9C3 /* TCTodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCTodo.swift; sourceTree = "<group>"; };
+		88C277E81F69308400C7C9C3 /* TCCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCalendarCell.swift; sourceTree = "<group>"; };
+		88C277EA1F6933B700C7C9C3 /* TCCalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCCalendarCell.xib; sourceTree = "<group>"; };
+		88C277EC1F693A8100C7C9C3 /* TCCalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCalendarVC.swift; sourceTree = "<group>"; };
+		88C277F11F69A64800C7C9C3 /* RealmQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
+		88C277F31F69B85200C7C9C3 /* TCFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCFilterVC.swift; sourceTree = "<group>"; };
+		88C277F51F69C59B00C7C9C3 /* TCNewToDoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCNewToDoVC.swift; sourceTree = "<group>"; };
+		88C277F71F69D64700C7C9C3 /* TCCalendarDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCCalendarDay.swift; sourceTree = "<group>"; };
+		88C277FB1F69E44400C7C9C3 /* RealmWrite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmWrite.swift; sourceTree = "<group>"; };
+		88C277FD1F6A103C00C7C9C3 /* TCToDoListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCToDoListVC.swift; sourceTree = "<group>"; };
+		88C278031F6A2F3100C7C9C3 /* TCListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCListCell.xib; sourceTree = "<group>"; };
+		88C278051F6A300D00C7C9C3 /* TCListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCListCell.swift; sourceTree = "<group>"; };
+		F1735B50BD8C1C42A17886E9 /* Pods-todoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todoChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-todoChallenge/Pods-todoChallenge.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8841E91C1F69208C00D40333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39F0A8CD7455D2B35C9C9884 /* Pods_todoChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49FA1F391839415219E54244 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ACF015C56917F89CF12CAFF /* Pods-todoChallenge.debug.xcconfig */,
+				F1735B50BD8C1C42A17886E9 /* Pods-todoChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8841E9161F69208C00D40333 = {
+			isa = PBXGroup;
+			children = (
+				8841E9211F69208C00D40333 /* todoChallenge */,
+				8841E9201F69208C00D40333 /* Products */,
+				49FA1F391839415219E54244 /* Pods */,
+				EBE3B8B294808E7D4F8AA797 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8841E9201F69208C00D40333 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8841E91F1F69208C00D40333 /* todoChallenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8841E9211F69208C00D40333 /* todoChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				88C277EE1F69A3B100C7C9C3 /* Model */,
+				88C277F01F69A3D600C7C9C3 /* Views */,
+				88C277EF1F69A3C200C7C9C3 /* Controllers */,
+				8841E9221F69208C00D40333 /* AppDelegate.swift */,
+				8841E9261F69208C00D40333 /* Main.storyboard */,
+				8841E9291F69208C00D40333 /* Assets.xcassets */,
+				8841E92B1F69208C00D40333 /* LaunchScreen.storyboard */,
+				8841E92E1F69208C00D40333 /* Info.plist */,
+				88C277F11F69A64800C7C9C3 /* RealmQuery.swift */,
+				88C277FB1F69E44400C7C9C3 /* RealmWrite.swift */,
+			);
+			path = todoChallenge;
+			sourceTree = "<group>";
+		};
+		88C277EE1F69A3B100C7C9C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88C277E41F6924E600C7C9C3 /* TCTodo.swift */,
+				88C277F71F69D64700C7C9C3 /* TCCalendarDay.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		88C277EF1F69A3C200C7C9C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88C277EC1F693A8100C7C9C3 /* TCCalendarVC.swift */,
+				88C277F31F69B85200C7C9C3 /* TCFilterVC.swift */,
+				88C277F51F69C59B00C7C9C3 /* TCNewToDoVC.swift */,
+				88C277FD1F6A103C00C7C9C3 /* TCToDoListVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		88C277F01F69A3D600C7C9C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88C277E81F69308400C7C9C3 /* TCCalendarCell.swift */,
+				88C277EA1F6933B700C7C9C3 /* TCCalendarCell.xib */,
+				88C278051F6A300D00C7C9C3 /* TCListCell.swift */,
+				88C278031F6A2F3100C7C9C3 /* TCListCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EBE3B8B294808E7D4F8AA797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				297BBA1196D3C0DAAB10FDAD /* Pods_todoChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8841E91E1F69208C00D40333 /* todoChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8841E9311F69208C00D40333 /* Build configuration list for PBXNativeTarget "todoChallenge" */;
+			buildPhases = (
+				FE63C823687527FDDB510F13 /* [CP] Check Pods Manifest.lock */,
+				8841E91B1F69208C00D40333 /* Sources */,
+				8841E91C1F69208C00D40333 /* Frameworks */,
+				8841E91D1F69208C00D40333 /* Resources */,
+				E206EEE2455AE233669B97FF /* [CP] Embed Pods Frameworks */,
+				B7E0F4A3296904B59E3CE0AE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = todoChallenge;
+			productName = todoChallenge;
+			productReference = 8841E91F1F69208C00D40333 /* todoChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8841E9171F69208C00D40333 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Bozo Design Labs";
+				TargetAttributes = {
+					8841E91E1F69208C00D40333 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = H7DR849HVE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8841E91A1F69208C00D40333 /* Build configuration list for PBXProject "todoChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8841E9161F69208C00D40333;
+			productRefGroup = 8841E9201F69208C00D40333 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8841E91E1F69208C00D40333 /* todoChallenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8841E91D1F69208C00D40333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C277EB1F6933B700C7C9C3 /* TCCalendarCell.xib in Resources */,
+				8841E92D1F69208C00D40333 /* LaunchScreen.storyboard in Resources */,
+				88C278041F6A2F3100C7C9C3 /* TCListCell.xib in Resources */,
+				8841E92A1F69208C00D40333 /* Assets.xcassets in Resources */,
+				8841E9281F69208C00D40333 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7E0F4A3296904B59E3CE0AE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-todoChallenge/Pods-todoChallenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E206EEE2455AE233669B97FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-todoChallenge/Pods-todoChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE63C823687527FDDB510F13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8841E91B1F69208C00D40333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C277FC1F69E44400C7C9C3 /* RealmWrite.swift in Sources */,
+				88C277E51F6924E600C7C9C3 /* TCTodo.swift in Sources */,
+				88C277F61F69C59B00C7C9C3 /* TCNewToDoVC.swift in Sources */,
+				88C277E91F69308400C7C9C3 /* TCCalendarCell.swift in Sources */,
+				88C277FE1F6A103C00C7C9C3 /* TCToDoListVC.swift in Sources */,
+				88C278061F6A300D00C7C9C3 /* TCListCell.swift in Sources */,
+				88C277F21F69A64800C7C9C3 /* RealmQuery.swift in Sources */,
+				88C277F41F69B85200C7C9C3 /* TCFilterVC.swift in Sources */,
+				88C277F81F69D64700C7C9C3 /* TCCalendarDay.swift in Sources */,
+				8841E9231F69208C00D40333 /* AppDelegate.swift in Sources */,
+				88C277ED1F693A8100C7C9C3 /* TCCalendarVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8841E9261F69208C00D40333 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8841E9271F69208C00D40333 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8841E92B1F69208C00D40333 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8841E92C1F69208C00D40333 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8841E92F1F69208C00D40333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8841E9301F69208C00D40333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8841E9321F69208C00D40333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ACF015C56917F89CF12CAFF /* Pods-todoChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H7DR849HVE;
+				INFOPLIST_FILE = todoChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bdl.todoChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8841E9331F69208C00D40333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1735B50BD8C1C42A17886E9 /* Pods-todoChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = H7DR849HVE;
+				INFOPLIST_FILE = todoChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bdl.todoChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8841E91A1F69208C00D40333 /* Build configuration list for PBXProject "todoChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8841E92F1F69208C00D40333 /* Debug */,
+				8841E9301F69208C00D40333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8841E9311F69208C00D40333 /* Build configuration list for PBXNativeTarget "todoChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8841E9321F69208C00D40333 /* Debug */,
+				8841E9331F69208C00D40333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8841E9171F69208C00D40333 /* Project object */;
+}

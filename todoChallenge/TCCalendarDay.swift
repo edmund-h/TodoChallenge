@@ -19,13 +19,14 @@ struct TCCalendarDay {
     var full: String {
         return "\(weekday) \(day) \(month) \(year)"
     }
-    var date: Date? {
-        return TCCalendarDay.dateFormatter.date(from: full)
+    var date: Date {
+        return TCCalendarDay.dateFormatter.date(from: full)  ?? Date()
     }
     
     static var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE MMMM dd yyyy"
+        //european format just for you!
+        formatter.dateFormat = "EEEE dd MMM yyyy"
         return formatter
     }
     
@@ -36,8 +37,8 @@ struct TCCalendarDay {
         let dateComponents = dateStr.components(separatedBy: " ")
         
         let year = dateComponents[3]
-        let day = dateComponents[2]
-        let month = dateComponents[1]
+        let day = dateComponents[1]
+        let month = dateComponents[2]
         let weekday = dateComponents[0]
         let calendarDay = TCCalendarDay(day: day, month: month, weekday: weekday, year: year)
         

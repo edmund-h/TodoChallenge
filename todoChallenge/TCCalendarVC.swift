@@ -15,6 +15,7 @@ class TCCalendarVC: UICollectionViewController {
 
     
     var calendar: ToDoCalendar = [:]
+    var dates: [TCCalendarDay] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class TCCalendarVC: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calendar = RealmQuery.toDosByDate(filter: nil, forCalendar: .due)
+        sortOutDates()
         self.collectionView?.reloadData()
     }
     
@@ -66,13 +68,18 @@ class TCCalendarVC: UICollectionViewController {
         }
         
         calendar = RealmQuery.toDosByDate(filter: filter, forCalendar: .due)
-        
+        sortOutDates()
         collectionView?.reloadData()
     }
     
-    // MARK: - Navigation
-
+    func sortOutDates() {
+        //this will extract dates from the dictionary keys then sort by date
+        dates = calendar.keys.sorted(by: {dateTuple in
+            return dateTuple.0.date < dateTuple.1.date
+        })
+    }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dateSegue",
             let destination = segue.destination as? TCToDoListVC,
@@ -93,10 +100,13 @@ extension TCCalendarVC {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if calendar.isEmpty { return 1 }
-        return calendar.keys.count
+        
+        if dates.isEmpty { return 1 }
+        return dates.count
     }
 
+    // uses the dates index to determine number of items and dequeue because it is ordered
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TCCalendarCell
         if calendar.isEmpty {
@@ -105,7 +115,6 @@ extension TCCalendarVC {
             cell.weekdayLabel.text = "outside"
             return cell
         }
-        let dates = Array(calendar.keys)
         let myDate = dates[indexPath.item]
         cell.dayLabel.text = myDate.day
         cell.monthLabel.text = myDate.month

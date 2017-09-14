@@ -1,5 +1,5 @@
 PODS:
-  - FTPopOverMenu_Swift (0.0.8)
+  - FTPopOverMenu_Swift (0.0.9)
   - Realm (2.10.0):
     - Realm/Headers (= 2.10.0)
   - Realm/Headers (2.10.0)
@@ -11,7 +11,7 @@ DEPENDENCIES:
   - RealmSwift
 
 SPEC CHECKSUMS:
-  FTPopOverMenu_Swift: '08f9a712c63811f675fe0b604c792e46246e00d9'
+  FTPopOverMenu_Swift: 3c1c01a5005a06230ea4b7b9f4a96300f5748bd7
   Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
   RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
 
